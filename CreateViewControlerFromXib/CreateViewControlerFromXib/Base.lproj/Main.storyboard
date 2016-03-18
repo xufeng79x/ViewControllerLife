@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5J-KO-A7x">
+                                <rect key="frame" x="59" y="45" width="203" height="30"/>
+                                <state key="normal" title="Show ViewController-xib"/>
+                                <connections>
+                                    <action selector="showControllerPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="flP-bU-0sV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sv-iG-aom">
+                                <rect key="frame" x="64" y="225" width="203" height="30"/>
+                                <state key="normal" title="Show ViewController-code"/>
+                                <connections>
+                                    <action selector="showCodeViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wkU-AL-IzZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDf-vc-th8">
+                                <rect key="frame" x="53" y="139" width="224" height="30"/>
+                                <state key="normal" title="Show ViewController-storyborad"/>
+                                <connections>
+                                    <segue destination="NrD-Lt-LrV" kind="show" id="wNs-Jf-MMZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="FFs-t2-Cxl"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="267"/>
+        </scene>
+        <!--Story Borad View Controller-->
+        <scene sceneID="nzf-M8-nmQ">
+            <objects>
+                <viewController id="NrD-Lt-LrV" customClass="StoryBoradViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="97K-Eb-9mL"/>
+                        <viewControllerLayoutGuide type="bottom" id="jzL-TC-fzt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="atp-LM-Lh0" customClass="MyStoryView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISc-y3-JqC">
+                                <rect key="frame" x="15" y="157" width="290" height="30"/>
+                                <state key="normal" title="Back From storyBorad controller to root"/>
+                                <connections>
+                                    <action selector="backToRoot:" destination="NrD-Lt-LrV" eventType="touchUpInside" id="a27-IR-xIK"/>
+                                    <action selector="rr:" destination="atp-LM-Lh0" eventType="touchUpInside" id="KHP-id-LGw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="button" destination="ISc-y3-JqC" id="OOk-Oa-1aA"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UN5-Sd-SDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1463" y="267"/>
+        </scene>
+    </scenes>
+</document>
